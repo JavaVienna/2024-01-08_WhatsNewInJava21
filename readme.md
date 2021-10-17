@@ -76,6 +76,22 @@
        
        com.dominikdorn.whatsnewinjava.java17.sealedclasses.SealedSample.main(new String[]{});
        ```
-       
+# 08 | java9 / process manager
+     - current process info
+     - iterating on handles / pstree
+     - killing processes + children
+     - working with input / output of processes
+       + call java process with java path/to/source/file.java
+
+# 09 | java11 / string
+     - lines
+     - strip 
+     - repeat
+
+# 10 | java11 / file methods
+    - readString
+        -> read own source code
+
+
 
 
