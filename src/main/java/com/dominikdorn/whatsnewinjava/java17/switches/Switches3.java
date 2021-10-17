@@ -18,8 +18,6 @@ public class Switches3 {
     println(parseString("http://java.wien"));
     println(parseString("webex://adfadsfadf"));
 
-
-
   }
 
   static Pattern emailPattern = Pattern.compile("^([a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+)@([a-zA-Z0-9.-]+)$");

@@ -25,7 +25,12 @@ final class PaypalBusiness2 extends Paypal {
 
 }
 
+
+//<editor-fold desc="record">
+
 record Wise (String bla) implements PaymentProcessor {}
+
+//</editor-fold>
 
 // final class kann nicht mehr erweitert werden
 final class Sofort implements PaymentProcessor {

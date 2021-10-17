@@ -37,6 +37,11 @@ class Elephant implements Animal {
   }
 }
 
+
+// JEP 361: Switch Expressions
+// since Java 14
+// JEP 354: Switch Expressions (Second Preview)
+// Java 13
 public class Switches {
   // This is a preview feature, enable with --enable-preview!
   public static void main(String[] args) {

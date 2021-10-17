@@ -20,12 +20,12 @@ public class RecordsExample3 {
 
     var dominik = new User("dominik", 35);
     var oldDominik = dominik.withAge(85);
-
+//    dominik.age = 20;
     println(dominik);
     println(oldDominik);
     println(dominik.getOlder());
 
-    var afterGraduation = dominik.withName("Dr Dominik").withAge(38);
+    var afterGraduation = dominik.withName("Dr Dominik").withAge(40);
     println(afterGraduation);
   }
 

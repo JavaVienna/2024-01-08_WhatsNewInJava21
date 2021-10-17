@@ -9,7 +9,8 @@ class Example {
   Address address;
 }
 
-
+// JEP 358: Helpful NullPointerExceptions
+// Java 14
 public class HelpfulNullPointerExceptions {
  public static void main(String[] args) {
    var e = new Example();

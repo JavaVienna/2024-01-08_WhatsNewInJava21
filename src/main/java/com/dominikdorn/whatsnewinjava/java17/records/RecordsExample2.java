@@ -17,5 +17,5 @@ public class RecordsExample2 {
 
 
   }
-  static void println(Object o ) { System.out.println(String.valueOf(o));}
+  static void println(Object o ) { System.out.println(o);}
 }

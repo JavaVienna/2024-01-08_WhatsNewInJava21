@@ -1,5 +1,7 @@
 package com.dominikdorn.whatsnewinjava.java17.textblocks;
 
+import java.util.UUID;
+
 public class Textblocks {
 
   public static void main(String[] args) {
@@ -7,7 +9,7 @@ public class Textblocks {
         "<head>\n" +
         "<title>Java Vienna!</title>\n" +
         "</head>\n</html>";
-    System.out.println(old);
+    println(old);
 
     //<editor-fold desc="html">
     var html = """
@@ -17,8 +19,7 @@ public class Textblocks {
           </head>
         </html>
         """;
-
-//    System.out.println(html);
+//    println(html);
     //</editor-fold>
 
     //<editor-fold desc="query">
@@ -34,7 +35,50 @@ public class Textblocks {
         WHERE
           a.city = 'vienna';
         """;
-//    System.out.println(query);
+//    println(query);
     //</editor-fold>
+
+
+    //<editor-fold desc="Parameters 1">
+    var parameters1 = """
+        Hello %s!
+        
+        Welcome to our service!
+        Please click %s to activate your account!
+        
+        Sincerly, 
+        SAAS-Startup
+        
+        """.formatted("user@host.com", "https://www.mysaas.com/activate?" + UUID.randomUUID().toString());
+//    println(parameters1);
+    //</editor-fold>
+
+
+    //<editor-fold desc="Parameters 2">
+    var parameters2 = """
+        Hello $username!
+        
+        Welcome to our service!
+        Please click $link to activate your account!
+        
+        Sincerly, 
+        SAAS-Startup
+        
+        """.replace("$username", "user@host.com")
+        .replace("$link", "https://www.mysaas.com/activate?" + UUID.randomUUID().toString());
+//    println(parameters2);
+    //</editor-fold>
+
+    //<editor-fold desc="whitespace">
+    var whitespace = """
+        no space on ma right    
+        some space on ma right    \s
+        yolo!
+        """.replace(" ", "*");
+//    println(whitespace);
+    //</editor-fold>
+
   }
+
+  private static void println(Object o) { System.out.println(o);}
 }

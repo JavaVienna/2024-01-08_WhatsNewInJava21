@@ -6,3 +6,4 @@ lazy val root = (project in file("."))
     javacOptions ++= Seq("-source", "17", "-target", "17", "--enable-preview"),
 //    javaOptions ++= Seq("--enable-preview")
   )
+  .enablePlugins(JShellPlugin)
