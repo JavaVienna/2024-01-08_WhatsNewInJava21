@@ -22,7 +22,7 @@
 - sealed abstract class
 - final/non-sealed
 
-# 04 | java17/records
+# 05 | java17/records
 
  - java17/records/1
      - basic records
@@ -41,14 +41,14 @@
  - java17/records/6
     - custom constructors
 
-# 05 | java9 / httpclient / 1
+# 06 | java9 / httpclient / 1
 
  - httpclient / 1
    - basic get request
  - httpclient / 2
    - websocket client
 
-# 06 | java9 / jshell
+# 07 | java9 / jshell
  - read–eval–print loop – REPL
  - show records
     ```java
