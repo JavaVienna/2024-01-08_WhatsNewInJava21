@@ -1,9 +1,9 @@
-package com.dominikdorn.whatsnewinjava.java17.records;
+package com.dominikdorn.whatsnewinjava.java21.recordsswitch;
 
 import java.util.Optional;
 import java.util.stream.Stream;
 
-public class RecordsExample5 {
+public class R01RecordsExampleJava21 {
 
   sealed interface Identity permits UserPassword, OAuth {
   }
@@ -31,11 +31,11 @@ public class RecordsExample5 {
   }*/
 
   // Java19 Way
-  private static Optional<Identity> authenticateUserPass(String user, String pass) {
+  private static Optional<Identity> authenticateUserPass(final String user, final String pass) {
     return getUserList().filter(id -> switch (id) {
-      case UserPassword u when (u.username.equals(user) && u.password.equals(pass)) -> true;
-//      case UserPassword(var id, var username, var password) && (sername.equals(user) && password.equals(pass)) -> true;
-//      case OAuth(String token) -> false
+      case UserPassword u when (u.username.equals(user) && u.password.equals(pass)) -> true; // this line could ideally be simplified to
+//      case UserPassword(_, user, pass )  -> true; // TODO hopefully this gets implemented
+//      case UserPassword(int userId, String username, String password) when (username.equals(user) && password.equals(pass)) -> true;
       case OAuth o when o.token.equals(user+pass) -> true;
       default -> false;
     }).findFirst();

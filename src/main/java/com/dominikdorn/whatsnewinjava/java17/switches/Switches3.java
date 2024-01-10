@@ -26,13 +26,13 @@ public class Switches3 {
   static Optional<Type> parseString(String s) {
 
     switch (s) {
-      case String e && (emailPattern.matcher(e).matches()) -> {
+      case String e when (emailPattern.matcher(e).matches()) -> {
         println("email matched");
 //        var m = emailPattern.matcher(e);
 //        m.matches();
 //        return Optional.of(new Email(m.group(1), m.group(2)));
       }
-      case String u && (httpUrlPattern.matcher(u).matches()) -> {
+      case String u when (httpUrlPattern.matcher(u).matches()) -> {
         println("url matched");
 //        var m = httpUrlPattern.matcher(u);
 //        m.matches();
